@@ -1,4 +1,4 @@
-# EAS Setup Guide for FeatherGlobe Chat
+# EAS Setup Guide for ParksGuide Chat
 
 This guide explains how to set up EAS (Expo Application Services) for building and submitting your app to the App Store.
 
@@ -61,9 +61,9 @@ Replace:
 1. Go to [App Store Connect](https://appstoreconnect.apple.com)
 2. Create a new app:
    - Platform: iOS
-   - Name: FeatherGlobe
-   - Bundle ID: `com.nitinfed.featherglobe` (must match `app.json`)
-   - SKU: Any unique identifier (e.g., `featherglobe-2026`)
+   - Name: ParksGuide
+   - Bundle ID: `com.nitinfed.parksguide` (must match `app.json`)
+   - SKU: Any unique identifier (e.g., `parksguide-2026`)
 3. Fill out the app details, privacy policy, screenshots, etc.
 4. Create an App Store Connect API key for EAS:
    - In App Store Connect: Users and Access → Keys → In-App Purchase

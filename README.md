@@ -1,4 +1,4 @@
-# FeatherGlobe
+# ParksGuide
 
 An iOS-first React Native app for exploring U.S. National Park Service sites, built with Expo (SDK 57), Expo Router and TypeScript on the [NPS data API](https://www.nps.gov/subjects/developer/api-documentation.htm). Android works from the same code when you're ready.
 
@@ -46,7 +46,7 @@ eas build --platform ios --profile production
 eas submit --platform ios --profile production
 ```
 
-The bundle identifier is `com.nitinfed.featherglobe` in `app.json`; change it before your first build if you want a different one.
+The bundle identifier is `com.nitinfed.parksguide` in `app.json`; change it before your first build if you want a different one.
 
 ## Android later
 

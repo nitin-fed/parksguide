@@ -94,7 +94,7 @@ const ChatRequestSchema = z.object({
 
 type ChatRequest = z.infer<typeof ChatRequestSchema>;
 
-const SYSTEM_PROMPT = `You are a helpful assistant for the FeatherGlobe app, which helps users plan trips to US National Parks.
+const SYSTEM_PROMPT = `You are a helpful assistant for the ParksGuide app, which helps users plan trips to US National Parks.
 
 Your role is to:
 - Answer questions about national parks, their features, facilities, and attractions
@@ -221,5 +221,5 @@ app.use((err: unknown, _req: Request, res: Response, _next: NextFunction) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`FeatherGlobe chat proxy listening on port ${PORT}`);
+  console.log(`ParksGuide chat proxy listening on port ${PORT}`);
 });

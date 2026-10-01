@@ -1,6 +1,6 @@
-# FeatherGlobe Chat Proxy Server
+# ParksGuide Chat Proxy Server
 
-A lightweight Node.js/Express proxy that forwards chat requests from the FeatherGlobe mobile app to the Groq API.
+A lightweight Node.js/Express proxy that forwards chat requests from the ParksGuide mobile app to the Groq API.
 
 ## Local Development
 
@@ -74,8 +74,8 @@ ufw allow 443/tcp   # HTTPS
 ufw enable
 
 # Create app directory
-mkdir -p /opt/featherglobe-chat
-cd /opt/featherglobe-chat
+mkdir -p /opt/parksguide-chat
+cd /opt/parksguide-chat
 ```
 
 ### Step 2: Deploy the App
@@ -85,11 +85,11 @@ cd /opt/featherglobe-chat
 npm run build
 
 # Copy to VPS:
-scp -r dist/ package.json package-lock.json ecosystem.config.cjs .env root@your_vps_ip:/opt/featherglobe-chat/
+scp -r dist/ package.json package-lock.json ecosystem.config.cjs .env root@your_vps_ip:/opt/parksguide-chat/
 
 # SSH back in and install production dependencies:
 ssh root@your_vps_ip
-cd /opt/featherglobe-chat
+cd /opt/parksguide-chat
 npm install --production
 
 # Install pm2 globally:
@@ -108,7 +108,7 @@ pm2 save
 
 # Check status
 pm2 status
-pm2 logs featherglobe-chat-proxy
+pm2 logs parksguide-chat-proxy
 ```
 
 ### Step 4: Configure Caddy (HTTPS)
@@ -152,25 +152,25 @@ curl https://your-domain.com/health
 
 ```bash
 # View logs
-pm2 logs featherglobe-chat-proxy
+pm2 logs parksguide-chat-proxy
 
 # Restart the app
-pm2 restart featherglobe-chat-proxy
+pm2 restart parksguide-chat-proxy
 
 # Stop the app
-pm2 stop featherglobe-chat-proxy
+pm2 stop parksguide-chat-proxy
 ```
 
 ### Maintenance
 
 1. **Rotate Groq API key:**
    - Update `.env` on the VPS
-   - Restart: `pm2 restart featherglobe-chat-proxy`
+   - Restart: `pm2 restart parksguide-chat-proxy`
 
 2. **Update the app:**
    - Build locally: `npm run build`
    - Copy to VPS
-   - Restart: `pm2 restart featherglobe-chat-proxy`
+   - Restart: `pm2 restart parksguide-chat-proxy`
 
 3. **Check Groq usage:**
    - Go to https://console.groq.com and check your API usage

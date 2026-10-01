@@ -20,7 +20,7 @@ interface ChatContextValue {
 
 const ChatContextInstance = createContext<ChatContextValue | undefined>(undefined);
 
-const STORAGE_KEY_PREFIX = 'featherglobe/chat/v1';
+const STORAGE_KEY_PREFIX = 'parksguide/chat/v1';
 const MAX_HISTORY = 10;
 
 async function loadChatThread(threadId: string): Promise<ChatThread> {

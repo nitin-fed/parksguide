@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 
-const STORAGE_KEY = 'featherglobe/trips/v1';
+const STORAGE_KEY = 'parksguide/trips/v1';
 
 export interface TripStop {
   parkCode: string;

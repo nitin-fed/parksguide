@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "FeatherGlobe",
-    "slug": "featherglobe",
+    "name": "ParksGuide",
+    "slug": "parksguide",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.nitinfed.featherglobe",
+      "bundleIdentifier": "com.nitinfed.parksguide",
       "buildNumber": "1"
     },
     "android": {
@@ -19,7 +19,7 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.nitinfed.featherglobe"
+      "package": "com.nitinfed.parksguide"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -31,10 +31,10 @@
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "FeatherGlobe uses your location to show how far away parks are."
+          "locationWhenInUsePermission": "ParksGuide uses your location to show how far away parks are."
         }
       ]
     ],
-    "scheme": "featherglobe"
+    "scheme": "parksguide"
   }
 }
