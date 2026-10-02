@@ -210,12 +210,10 @@ app.post("/v1/chat", authenticateToken, async (req: Request, res: Response) => {
         return res.status(500).json({ error: "Invalid Groq API key" });
       }
       if (error.response?.status === 400) {
-        return res
-          .status(400)
-          .json({
-            error: "Bad request to Groq",
-            details: error.response?.data,
-          });
+        return res.status(400).json({
+          error: "Bad request to Groq",
+          details: error.response?.data,
+        });
       }
     }
 
