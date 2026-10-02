@@ -1,10 +1,10 @@
 module.exports = {
   apps: [
     {
-      name: 'featherglobe-chat-proxy',
+      name: 'parksguide-chat-proxy',
       script: 'dist/index.js',
       instances: 1,
-      exec_mode: 'cluster',
+      exec_mode: 'fork',
       env: {
         NODE_ENV: 'production',
         PORT: 3000,
